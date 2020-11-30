@@ -1,0 +1,17 @@
+1- npm i react-weathericons
+2- npm install prop-types
+3- api OpenWeatherMap
+4- npm install convert-units
+5- npm install @material-ui/core
+6- npm install react-flexbox-grid
+
+
+
+--------------------------------------
+ptsr => PropTypes.string.isRequired
+
+cdm => componentDidMount
+cdup => componentDidUpdate
+cwm => componentWillMount /¡ADVERTENCIA! Quedará obsoleto en React v17. En su lugar, utilice componentDidMount.
+cwup => componentWillUpdate
+
