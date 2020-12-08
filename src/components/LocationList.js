@@ -7,20 +7,22 @@ const LocationList = ({ cities, onSelectedLocation }) => {
     const handleWeatherLocationClick = city => {
         console.log("handleWeatherLocationClick");
         onSelectedLocation(city);
-    }
-    const strToComponents = cities => (
-        cities.map(city =>
+    };
+
+    const strToComponent = cities => (
+        cities.map( city =>
             (
                 <WeatherLocation
-                     key={city}
-                     city={city}
-                     onWeatherLocationClick = {() => handleWeatherLocationClick(city)}/>))
+                    key={city.key}
+                    city={city.name}
+                    onWeatherLocationClick={() => handleWeatherLocationClick(city.name)}
+                    data = {city.data}
+                    />))
     );
-    return (
-        <div className="locationList">
-            {strToComponents(cities)}
-        </div>
-    );
+
+    return (<div className="locationList">
+        {strToComponent(cities)}
+    </div>);
 };
 
 LocationList.propTypes = {

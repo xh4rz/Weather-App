@@ -35,7 +35,10 @@
 @media (max-width: 64em) {
   .detail {
     height: 40vh;
-
   }
+}
+
+.container {
+  padding-top: 100px;
 }
 

@@ -1,7 +1,6 @@
 .locationList {
     height: 85vh;
     overflow: auto;
-    padding-top: 30px;
 }
 
 @media (max-width: 64em) {

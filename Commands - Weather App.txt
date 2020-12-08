@@ -4,7 +4,13 @@
 4- npm install convert-units
 5- npm install @material-ui/core
 6- npm install react-flexbox-grid
+7- npm install moment --save
 
+8- npm install --save redux
+9- npm install --save react-redux
+10- npm install --save redux-thunk
+11- npm install --save reselect
+12- npm install --save lodash.topairs
 
 
 --------------------------------------

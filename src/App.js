@@ -8,8 +8,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import LocationList from './components/LocationList';
-import ForecastExtended from './components/ForecastExtended';
+import LocationListContainer from './containers/LocationListContainer';
+import ForecastExtendedContainer from './containers/ForecastExtendedContainer';
 
 import './App.css';
 
@@ -21,13 +21,7 @@ const cities = [
   'Madrid,es'
 ];
 
-
-
 class App extends Component {
-
-  handleSelectedLocation = city => {
-    console.log(`handleSelectedLocation ${city}`);
-  }
 
   render() {
     return (
@@ -38,7 +32,7 @@ class App extends Component {
           <Col xs={12}>
             <AppBar tittle="Weather App" position="fixed">
               <Toolbar>
-                <IconButton edge="start"  color="inherit" aria-label="menu">
+                <IconButton edge="start" color="inherit" aria-label="menu">
                   <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" >
@@ -49,13 +43,12 @@ class App extends Component {
           </Col>
           <Row>
             <Col xs={12} md={6}>
-              <LocationList cities={cities}
-                onSelectedLocation={this.handleSelectedLocation} ></LocationList>
+              <LocationListContainer cities={cities} ></LocationListContainer>
             </Col>
             <Col xs={12} md={6}>
               <Paper elevation={4}>
                 <div className='detail'>
-                  <ForecastExtended></ForecastExtended>
+                    <ForecastExtendedContainer></ForecastExtendedContainer>
                 </div>
               </Paper>
             </Col>
